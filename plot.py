@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+plt.rcParams["font.family"] = "serif"
+plt.rcParams["font.serif"] = ["Times New Roman"]
 
 def arrow_axes(ax):
     # Hide normal spines
@@ -38,9 +40,9 @@ y1 = 10 - 0.04 * x
 
 fig, ax = plt.subplots(figsize=(5, 4))
 ax.plot(x, y1, linewidth=1.5)
-ax.set_xlabel("Time")
-ax.set_ylabel("Outcome")
-ax.set_title("Graph 1: Gentle downward trend")
+ax.set_xlabel("Time",fontsize=12, fontname="Times New Roman")
+ax.set_ylabel("Relationship Satisfaction",fontsize=12, fontname="Times New Roman")
+ax.set_title("Figure 1a",fontsize=12, fontname="Times New Roman")
 ax.set_xlim(xlim)
 ax.set_ylim(ylim)
 arrow_axes(ax)
@@ -60,9 +62,9 @@ y2 = baseline - depth * v_drop
 
 fig, ax = plt.subplots(figsize=(5, 4))
 ax.plot(x, y2, linewidth=1.5)
-ax.set_xlabel("Time")
-ax.set_ylabel("Outcome")
-ax.set_title("Graph 2: Sharp V-shaped mid disruption")
+ax.set_xlabel("Time",fontsize=12, fontname="Times New Roman")
+ax.set_ylabel("Relationship Satisfaction",fontsize=12, fontname="Times New Roman")
+ax.set_title("Figure 1b",fontsize=12, fontname="Times New Roman")
 ax.set_xlim(xlim)
 ax.set_ylim(ylim)
 arrow_axes(ax)
@@ -76,9 +78,9 @@ y3 = baseline + 0.15 * np.sin(3.0 * x)
 
 fig, ax = plt.subplots(figsize=(5, 4))
 ax.plot(x, y3, linewidth=1.5)
-ax.set_xlabel("Time")
-ax.set_ylabel("Outcome")
-ax.set_title("Graph 3: Fluctuations around a downward trend")
+ax.set_xlabel("Time",fontsize=12, fontname="Times New Roman")
+ax.set_ylabel("Relationship Satisfaction",fontsize=12, fontname="Times New Roman")
+ax.set_title("Figure 1c",fontsize=12, fontname="Times New Roman")
 ax.set_xlim(xlim)
 ax.set_ylim(ylim)
 arrow_axes(ax)
