@@ -19,11 +19,11 @@ def arrow_axes(ax):
     # Draw arrow axes
     ax.annotate(
         "", xy=(xmax, ymin), xytext=(xmin, ymin),
-        arrowprops=dict(arrowstyle="->", linewidth=1.2)
+        arrowprops=dict(arrowstyle="->", linewidth=1.2, color="black")
     )
     ax.annotate(
         "", xy=(xmin, ymax), xytext=(xmin, ymin),
-        arrowprops=dict(arrowstyle="->", linewidth=1.2)
+        arrowprops=dict(arrowstyle="->", linewidth=1.2, color="black")
     )
 
 # X range (conceptual time)
@@ -39,7 +39,7 @@ ylim = (8.5, 10.5)
 y1 = 10 - 0.04 * x
 
 fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot(x, y1, linewidth=1.5)
+ax.plot(x, y1, linewidth=1.5, color="black")
 ax.set_xlabel("Time",fontsize=12, fontname="Times New Roman")
 ax.set_ylabel("Relationship Satisfaction",fontsize=12, fontname="Times New Roman")
 ax.set_title("Figure 1a",fontsize=12, fontname="Times New Roman")
@@ -61,7 +61,7 @@ v_drop = np.maximum(0, 1 - np.abs(x - center) / width)
 y2 = baseline - depth * v_drop
 
 fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot(x, y2, linewidth=1.5)
+ax.plot(x, y2, linewidth=1.5, color="black")
 ax.set_xlabel("Time",fontsize=12, fontname="Times New Roman")
 ax.set_ylabel("Relationship Satisfaction",fontsize=12, fontname="Times New Roman")
 ax.set_title("Figure 1b",fontsize=12, fontname="Times New Roman")
@@ -77,7 +77,7 @@ plt.show()
 y3 = baseline + 0.15 * np.sin(3.0 * x)
 
 fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot(x, y3, linewidth=1.5)
+ax.plot(x, y3, linewidth=1.5, color="black")
 ax.set_xlabel("Time",fontsize=12, fontname="Times New Roman")
 ax.set_ylabel("Relationship Satisfaction",fontsize=12, fontname="Times New Roman")
 ax.set_title("Figure 1c",fontsize=12, fontname="Times New Roman")
